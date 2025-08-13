@@ -1,6 +1,8 @@
 # HeoMusic
 
-![](/img/HeoMusic3.webp)
+注意：这是复刻自[zhheo](https://github.com/zhheo/HeoMusic)作者，他的在线音乐播放器制作的很漂亮，很推荐使用。
+
+![HeoMusic 播放器界面](/img/HeoMusic3.webp)
 
 一个基于[Aplayer](https://github.com/DIYgod/APlayer)和[MetingJS](https://github.com/metowolf/MetingJS)的静态音乐播放器
 
@@ -24,7 +26,7 @@ HeoMusic支持URL参数 `https://music.zhheo.com/?id=`+ id +`&server=` + server
 
 例如：
 
-**HeoMusicTop:** https://music.zhheo.com/?id=8668419170&server=tencent
+**HeoMusicTop:** <https://music.zhheo.com/?id=8668419170&server=tencent>
 
 **鸡你太美:** https://music.zhheo.com/?id=2762963245&server=netease
 
