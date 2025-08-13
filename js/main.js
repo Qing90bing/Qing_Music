@@ -1,3 +1,40 @@
+// --- Preloader Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return; // Safety check
+
+  let timeoutFired = false;
+
+  // Function to hide the preloader
+  const hidePreloader = () => {
+      // If already hidden, do nothing
+      if (preloader.classList.contains('fade-out')) {
+          return;
+      }
+      
+      preloader.classList.add('fade-out');
+      setTimeout(() => {
+          preloader.style.display = 'none';
+      }, 500); // Must match CSS transition duration
+  };
+
+  // Set a timeout to hide the preloader after 10 seconds
+  const timeout = setTimeout(() => {
+      timeoutFired = true;
+      hidePreloader();
+  }, 10000);
+
+  // When the page is fully loaded, hide the preloader
+  window.onload = () => {
+      // If the timeout hasn't already fired, clear it and hide the preloader
+      if (!timeoutFired) {
+          clearTimeout(timeout);
+          hidePreloader();
+      }
+  };
+});
+// --- End Preloader Logic ---
+
 console.log("\n %c HeoMusic 开源静态音乐播放器 %c https://github.com/zhheo/HeoMusic \n", "color: #fadfa3; background: #030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;")
 var local = false;
 var isScrolling = false; // 添加全局变量 isScrolling，默认为 false
